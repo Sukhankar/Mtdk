@@ -1,23 +1,23 @@
-// src/components/Footer.jsx
+import Logo from '../assets/logo.png';
 import {
   Mail,
   MapPin,
   Phone,
   Facebook,
-  Instagram,
+  InstagramIcon,
   Twitter,
   Youtube
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#991B1B] text-white pt-10 pb-6 px-6 mt-16">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
-
-        {/* About Section */}
+    <footer className="bg-red-700 text-white px-6 py-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Logo and Description */}
         <div>
-          <h3 className="font-bold text-xl mb-2">MTDK Shikshan Sankul</h3>
-          <p className="text-sm leading-relaxed">
+          <img src={Logo} alt="MTDK Logo" className="w-24 mb-4" />
+          <p className="text-sm">
             MTDK Shikshan Sankul is dedicated to nurturing young minds with value-based, holistic education from Pre-primary to Junior College.
           </p>
         </div>
@@ -26,10 +26,16 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-lg mb-2">Quick Links</h4>
           <ul className="text-sm space-y-1">
-            <li><a href="#" className="hover:underline">Home</a></li>
-            <li><a href="#" className="hover:underline">About Us</a></li>
-            <li><a href="#" className="hover:underline">Admissions</a></li>
-            <li><a href="#" className="hover:underline">Contact</a></li>
+            <li><Link to="/" className="hover:underline">Home</Link></li>
+            <li><Link to="/about" className="hover:underline">About Us</Link></li>
+            <li><Link to="/administration" className="hover:underline">Administration</Link></li>
+            <li><Link to="/gallery" className="hover:underline">Gallery</Link></li>
+            <li><Link to="/academics" className="hover:underline">Academics</Link></li>
+            <li><Link to="/admission_fee" className="hover:underline">Admissions & Fees</Link></li>
+            <li><Link to="/rnd" className="hover:underline">R&D and IIC</Link></li>
+            <li><Link to="/student_life" className="hover:underline">Student Life</Link></li>
+            <li><Link to="/governance" className="hover:underline">Governance</Link></li>
+            <li><Link to="/contact" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
 
@@ -54,12 +60,11 @@ export default function Footer() {
           <h4 className="font-semibold text-lg mb-2">Follow Us</h4>
           <div className="flex items-center gap-4">
             <a href="#" className="hover:scale-110 transition-transform"><Facebook size={20} /></a>
-            <a href="#" className="hover:scale-110 transition-transform"><Instagram size={20} /></a>
+            <a href="#" className="hover:scale-110 transition-transform"><InstagramIcon size={20} /></a>
             <a href="#" className="hover:scale-110 transition-transform"><Twitter size={20} /></a>
             <a href="#" className="hover:scale-110 transition-transform"><Youtube size={20} /></a>
           </div>
         </div>
-
       </div>
 
       {/* Copyright */}

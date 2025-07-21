@@ -1,0 +1,6 @@
+@import "tailwindcss";
+/* src/index.css or main.css */
+html, body, #root {
+  width: 100%;
+  overflow-x: hidden;
+}
